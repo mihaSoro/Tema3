@@ -23,17 +23,30 @@ public abstract class Engine {
         mNrCycles=0;
     }
 
+    /*
+       This function performs admission wich is the same for both engines
+     */
     protected void Admission()
     {
         System.out.println("Open intake valve to let air in!");
     }
 
+    /*
+       This function performs evacuation
+     */
     protected  void Evacuation()
     {
         System.out.println("Open evacuation exhaust-valve to let exhaust-gas out!");
     }
 
+    /*
+      This function executes an engine cycles- each type of engine has it's own steps
+     */
     protected abstract void Cycle();
+
+    /*
+      Each engine injects fuel but it is performed differently
+     */
     protected abstract void inject_fuel() throws EngineException;
 
     public String get_Type()

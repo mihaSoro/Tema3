@@ -38,7 +38,7 @@ public class MAC extends Engine implements ISystem {
     }
 
     /*
-          This is the function that starts the engine
+          This is the function that starts an engine cycle
          */
     @Override
     protected void Cycle() {
@@ -54,6 +54,7 @@ public class MAC extends Engine implements ISystem {
         }
         this.Evacuation();
     }
+
 
     @Override
     public void check() throws EngineException {
