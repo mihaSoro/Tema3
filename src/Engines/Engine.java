@@ -40,7 +40,7 @@ public abstract class Engine {
     }
 
     /*
-      This function executes an engine cycles- each type of engine has it's own steps
+      This function executes an engine cycle- each type of engine has it's own steps
      */
     protected abstract void Cycle();
 

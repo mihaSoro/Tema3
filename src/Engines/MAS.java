@@ -31,14 +31,10 @@ public class MAS extends Engine implements ISystem {
             throw new EngineException("Gasoline Injection not performed!");
 
         System.out.println("Performing ignition task!");
-
-    }
-
-    @Override
-    protected void Evacuation() {
-        super.Evacuation();
         injection_status=false;
+
     }
+
 
     @Override
     protected void Cycle() {
@@ -51,7 +47,7 @@ public class MAS extends Engine implements ISystem {
         {
             System.out.println("Error during injection:"+ex.getMessage());
         }
-       this.Evacuation();
+       super.Evacuation();
     }
 
     @Override

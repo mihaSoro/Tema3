@@ -24,17 +24,12 @@ public class MAC extends Engine implements ISystem {
         if (!pilot_status)
             throw new EngineException("Pilot injection not performed!");
         System.out.println("Performing main injection! Injecting diesel!");
+        pilot_status=false;
     }
 
     private void pilot_injection() {
         System.out.println("Performing pilot injection!");
         pilot_status=true;
-    }
-
-    @Override
-    protected void Evacuation() {
-        super.Evacuation();
-        pilot_status=false;
     }
 
     /*
@@ -52,7 +47,7 @@ public class MAC extends Engine implements ISystem {
                 System.out.println("Error during Injection:"+ex.getMessage());
 
         }
-        this.Evacuation();
+        super.Evacuation();
     }
 
 
